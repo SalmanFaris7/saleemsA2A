@@ -1,0 +1,43 @@
+<div style="height: 500px; width: 300px">
+  <mat-card
+    class="example-card"
+    appearance="outlined"
+    style="background-color: antiquewhite"
+  >
+    <img
+      mat-card-image
+      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <p>Caramel Pudding</p>
+      <p>$2.50</p>
+    </mat-card-content>
+    <mat-card-actions *ngIf="!isAddeddToCart">
+      <button mat-button (click)="addToCart()">
+        <mat-icon>add_shopping_cart</mat-icon> Add to cart
+      </button>
+    </mat-card-actions>
+    <mat-card-actions *ngIf="isAddeddToCart">
+      <button mat-button (click)="increaseItem()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <input type="number" [value]="itemCount" />
+      <button mat-button (click)="decreaseItem()">
+        <mat-icon>remove</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #RemoveFromCart>
+  <mat-dialog-content>
+    <p>Do you want to remove item from cart?</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="cancelCartRemoval()">No</button>
+    <button mat-button (click)="removeFromCart()">Yes</button>
+  </mat-dialog-actions>
+</ng-template>
