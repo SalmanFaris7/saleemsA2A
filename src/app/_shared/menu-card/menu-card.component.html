@@ -1,10 +1,7 @@
-<div style="height: 500px; width: 300px">
-  <mat-card
-    class="example-card"
-    appearance="outlined"
-    style="background-color: antiquewhite"
-  >
+<div class="item-card">
+  <mat-card appearance="outlined" style="background-color: antiquewhite">
     <img
+      class="item-image"
       mat-card-image
       src="https://material.angular.io/assets/img/examples/shiba2.jpg"
       alt="Photo of a Shiba Inu"
@@ -16,8 +13,13 @@
       <p>$2.50</p>
     </mat-card-content>
     <mat-card-actions *ngIf="!isAddeddToCart">
-      <button mat-button (click)="addToCart()">
-        <mat-icon>add_shopping_cart</mat-icon> Add to cart
+      <button
+        mat-button
+        (click)="addToCart()"
+        style="background-color: #f66606; color: #ffffff"
+      >
+        <span>Add to cart</span>
+        <mat-icon>shopping_cart</mat-icon>
       </button>
     </mat-card-actions>
     <mat-card-actions *ngIf="isAddeddToCart">
