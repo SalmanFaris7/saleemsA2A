@@ -1,1 +1,24 @@
-
+<!-- <header id="navbar" class="navbar">
+  <nav><img src="src/assets/a2a_services.png" /></nav>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header> -->
+<header id="navbar" class="navbar">
+  <p-menubar [model]="navTopics" styleClass="custom-menubar">
+    <ng-template pTemplate="start">
+      <img src="assets/a2a_services.png" height="40" />
+    </ng-template>
+  </p-menubar>
+</header>
+<!-- <main>
+  <section id="home">Home Section</section>
+  <section id="about">About Section</section>
+  <section id="services">Services Section</section>
+  <section id="contact">Contact Section</section>
+</main> -->

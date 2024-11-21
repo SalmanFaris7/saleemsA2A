@@ -1,0 +1,62 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+header.navbar .p-menubar {
+  background: linear-gradient(to bottom, rgb(201, 201, 201), transparent)
+    no-repeat bottom;
+  backdrop-filter: blur(10px);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-menuitem-text {
+  color: #f66606 !important;
+  font-weight: 700;
+}
+
+.custom-menubar .p-menubar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push other items to the right */
+}
+
+.custom-menubar .p-menubar-start {
+  margin-right: auto;
+}
+
+.custom-menubar .p-menubar-end {
+  display: none;
+}
+
+.custom-menubar .p-menubar-root {
+  margin-left: auto; /* Ensure menu items are aligned to the right */
+}
+
+/* Transparent navbar initial state */
+.navbar {
+  background-color: transparent !important;
+}
+
+/* White blurry background when scrolled */
+.scrolled {
+  // background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(244, 181, 150, 0.9);
+  backdrop-filter: blur(10px);
+}

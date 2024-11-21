@@ -14,6 +14,9 @@ import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDialogModule } from "@angular/material/dialog";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { ButtonModule } from "primeng/button";
+import { GalleriaModule } from "primeng/galleria";
+import { MenubarModule } from "primeng/menubar";
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     MatIconModule,
     FontAwesomeModule,
     MatDialogModule,
+    ButtonModule,
+    GalleriaModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
