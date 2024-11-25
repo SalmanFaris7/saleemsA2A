@@ -1,19 +1,82 @@
 <div class="card" style="width: 100%">
-  <p-galleria
-    [value]="images"
-    (valueChange)="images = $event"
-    [showIndicators]="false"
-    [showThumbnails]="false"
-    [autoPlay]="true"
-    [circular]="true"
-    [responsiveOptions]="responsiveOptions"
-    [containerStyle]="{ 'max-width': '100%', 'max-height': '400px' }"
-  >
+  <p-galleria [value]="images" (valueChange)="images = $event" [showIndicators]="false" [showThumbnails]="false"
+    [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ 'max-width': '100%', 'max-height': '400px' }">
     <ng-template pTemplate="item" let-item>
-      <img
-        [src]="item.itemImageSrc"
-        style="width: 100%; height: 400px; object-fit: cover"
-      />
+      <img [src]="item.itemImageSrc" style="width: 100%; height: 400px; object-fit: cover" />
     </ng-template>
   </p-galleria>
+</div>
+
+<div class="container">
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <div class="welcome-text">
+      <h1>Welcome to A2A SERVICES LTD</h1>
+      <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.
+        Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus.</p>
+    </div>
+  </section>
+
+  <!-- Why A2A SERVICES Section -->
+  <!-- <section class="why">
+    <div class="why-content">
+      <div class="text">
+        <h2>Why A2A SERVICES?</h2>
+        <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis
+          tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus.</p>
+        <button class="btn">ABOUT US</button>
+      </div>
+      <div class="image">
+        <img src="../../../assets/a2a_carousel1.png" alt="Why A2A SERVICES?">
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Product Categories Section -->
+  <!-- <section class="categories">
+    <h2>OUR PRODUCT CATEGORIES</h2>
+    <div class="category">
+      <div class="category-image">
+        <img src="../../../assets/a2a_carousel2.png" alt="Menu">
+      </div>
+      <div class="category-text">
+        <h3>MENU</h3>
+        <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie.</p>
+        <button class="btn">EXPLORE MENU</button>
+      </div>
+    </div>
+  </section> -->
+
+  <section>
+    <div class="why-content">
+      <!-- <div class="row"> -->
+      <div class="col-6 text">
+        <h2>Why A2A SERVICES?</h2>
+        <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis
+          tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus.</p>
+        <button class="btn">ABOUT US</button>
+      </div>
+      <div class="col-6 image">
+        <img src="../../../assets/a2a_carousel1.png" alt="Why A2A SERVICES?">
+      </div>
+
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <!-- Product Categories Section -->
+  <section>
+    <h2 class="categories">OUR PRODUCT CATEGORIES</h2>
+    <div class="category">
+      <div class="col-6 category-image">
+        <img src="../../../assets/a2a_carousel2.png" alt="Menu">
+      </div>
+      <div class="col-6 category-text">
+        <h3>MENU</h3>
+        <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie.</p>
+        <button class="btn">EXPLORE MENU</button>
+      </div>
+    </div>
+  </section>
 </div>
