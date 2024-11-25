@@ -1,7 +1,14 @@
-.menu-items{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    background-color: #FFFCF3;;
-    border-bottom: 1px solid #e0e0e0;
-  }
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #fffcf3;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+}
+.row {
+  justify-content: center;
+}
