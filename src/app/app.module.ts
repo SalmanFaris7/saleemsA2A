@@ -17,6 +17,9 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { ButtonModule } from "primeng/button";
 import { GalleriaModule } from "primeng/galleria";
 import { MenubarModule } from "primeng/menubar";
+import { BadgeModule } from "primeng/badge";
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { MenubarModule } from "primeng/menubar";
     HomePageComponent,
     MenuPageComponent,
     MenuCardComponent,
+    NotFoundPageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { MenubarModule } from "primeng/menubar";
     ButtonModule,
     GalleriaModule,
     MenubarModule,
+    BadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

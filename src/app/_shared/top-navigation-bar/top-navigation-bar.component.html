@@ -1,24 +1,38 @@
-<!-- <header id="navbar" class="navbar">
-  <nav><img src="src/assets/a2a_services.png" /></nav>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+<nav id="navbar" class="navbar">
+  <div class="container">
+    <img src="assets/a2a_services.png" height="40" />
+    <button class="cart-icon menu-toggle" aria-label="Toggle navigation" (click)="toggleMenu()">
+      &#9776;
+    </button>
+    <ul class="nav-links" [class.active]="menuActive">
+      <li class="nav-bar-item"><a href="/home"><i class="pi pi-home nav-bar-icon"></i>Home</a></li>
+      <li class="nav-bar-item"><a href="/menu"><i class="pi pi-book nav-bar-icon"></i>Menu</a></li>
+      <li class="nav-bar-item"><a href="/home"><i class="pi pi-info nav-bar-icon"></i>About</a></li>
+      <li class="nav-bar-item"><a href="/home"><i class="pi pi-phone nav-bar-icon"></i>Contact</a></li>
+      <li class="nav-bar-item"><i class="pi pi-shopping-cart nav-bar-cart-icon" [class.active]="menuActive"
+          (click)="openCart()" pBadge [value]="getCartItemCount()"></i>
+      </li>
     </ul>
-  </nav>
-</header> -->
-<header id="navbar" class="navbar">
+    <!-- <a class="cart-icon" href="#"> -->
+    <!-- </a> -->
+  </div>
+</nav>
+<div class="carousel">
+  <div class="carousel-images" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <div class="carousel-image" *ngFor="let image of images">
+      <img [src]="image.url" [alt]="image.alt">
+    </div>
+  </div>
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>
+<!-- <header id="navbar" class="navbar">
   <p-menubar [model]="navTopics" styleClass="custom-menubar">
     <ng-template pTemplate="start">
       <img src="assets/a2a_services.png" height="40" />
     </ng-template>
+    <ng-template pTemplate="end">
+      <i class="pi pi-shopping-cart nav-bar-cart-icon" (click)="openCart()" pBadge [value]="getCartItemCount()"></i>
+    </ng-template>
   </p-menubar>
-</header>
-<!-- <main>
-  <section id="home">Home Section</section>
-  <section id="about">About Section</section>
-  <section id="services">Services Section</section>
-  <section id="contact">Contact Section</section>
-</main> -->
+</header> -->

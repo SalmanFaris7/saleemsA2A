@@ -1,23 +1,13 @@
-<div class="item-card">
+<!-- <div class="item-card">
   <mat-card appearance="outlined" style="background-color: antiquewhite">
-    <img
-      class="item-image"
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content
-      style="display: flex; flex-direction: column; align-items: center"
-    >
+    <img class="item-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      alt="Photo of a Shiba Inu" />
+    <mat-card-content style="display: flex; flex-direction: column; align-items: center">
       <p>Caramel Pudding</p>
       <p>$2.50</p>
     </mat-card-content>
     <mat-card-actions *ngIf="!isAddeddToCart">
-      <button
-        mat-button
-        (click)="addToCart()"
-        style="background-color: #f66606; color: #ffffff"
-      >
+      <button mat-button (click)="addToCart()" style="background-color: #f66606; color: #ffffff">
         <span>Add to cart</span>
         <mat-icon>shopping_cart</mat-icon>
       </button>
@@ -26,12 +16,33 @@
       <button mat-button (click)="increaseItem()">
         <mat-icon>add</mat-icon>
       </button>
-      <input type="number" [value]="itemCount" />
+      <input type="number" [value]="itemCount" style="width: 10px;" />
       <button mat-button (click)="decreaseItem()">
         <mat-icon>remove</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>
+</div> -->
+
+<div class="card mb-3 shadow-sm">
+  <img class="item-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu" />
+  <div class="card-body text-center">
+    <h5 class="card-title">Caramel Pudding</h5>
+    <p class="card-text">$2.50</p>
+    <button *ngIf="!isAddeddToCart" class="btn btn-warning" (click)="addToCart()"><mat-icon>shopping_cart</mat-icon> Add
+      to cart</button>
+    <div *ngIf="isAddeddToCart">
+      <button mat-button (click)="increaseItem()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <input type="number" [min]="1" [value]="itemCount" style="width: 80px;"
+        (change)="onCartItemCountChange($event)" />
+      <button mat-button (click)="decreaseItem()">
+        <mat-icon>remove</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>
 
 <ng-template #RemoveFromCart>

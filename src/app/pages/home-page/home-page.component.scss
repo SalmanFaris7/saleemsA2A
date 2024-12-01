@@ -1,4 +1,61 @@
 .card {
   mask-position: center;
-  mask: url("../../../assets/a2a_services.png") no-repeat;
+  // mask: url("../../../assets/a2a_services.png") no-repeat;
+}
+
+/* styles.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.welcome {
+  text-align: center;
+  background-color: #fde9d9;
+  padding: 30px;
+}
+
+.why-content {
+  margin: 30px 10px 0 30px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: unset;
+}
+
+.why-content .text {
+  max-width: 50%;
+}
+
+.why-content .image img {
+  max-width: 100%;
+}
+
+.categories {
+  text-align: center;
+}
+
+.category {
+  margin: 30px 10px 0 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-image img {
+  max-width: 100%;
+}
+
+.btn {
+  background-color: #ff7b54;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #ff6347;
 }
